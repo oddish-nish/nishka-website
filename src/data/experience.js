@@ -1,0 +1,117 @@
+export const experience = [
+  {
+    id: 'promise',
+    title: 'Promise',
+    role: 'Forward Deployed Engineer',
+    when: 'Apr 2026 – Jul 2026',
+    year: '2026',
+    onResume: true,
+    explore: {
+      preview: 'Policy, production TypeScript, and a statewide SNAP rollout.',
+      why: 'I wanted to build software that sits inside a real public system — messy policy, real people, no toy dataset.',
+      learned: 'Shipped production TypeScript for the Mississippi Department of Human Services SNAP Change Reporting platform. Turned eligibility updates into structured submissions for caseworkers. Sat with MDHS stakeholders until the policy made sense as a product.',
+      thinking: 'Statewide rollout serving 16,000+ participants. A Claude support agent that had to be stress-tested before anyone trusted it. A 4.7 star rating on a government product, which still surprises me.',
+    },
+    hire: {
+      preview: 'Production TypeScript for MDHS SNAP Change Reporting; statewide rollout serving 16,000+ participants.',
+      bullets: [
+        'Built and shipped production TypeScript features for the Mississippi Department of Human Services (MDHS) SNAP Change Reporting platform, contributing to a statewide rollout serving 16,000+ participants.',
+        'Developed dynamic eligibility workflows that transformed user responses into structured submissions for MDHS caseworkers, translating complex SNAP policy into scalable production workflows.',
+        'Designed internal dashboards and partnered directly with MDHS stakeholders to refine reporting flows, deploying production improvements to a platform maintaining a 4.7 star user rating.',
+        'Evaluated and improved a Claude-powered support agent by stress testing agentic workflows and refining a multi-stage LLM evaluation pipeline prior to production deployment.',
+      ],
+      tech: 'TypeScript, Claude, LLM evaluation, public-sector product, dashboards',
+    },
+  },
+  {
+    id: 'cisco-2024',
+    title: 'Cisco Meraki',
+    role: 'Full Stack Software Engineer Intern',
+    when: 'May 2024 – Aug 2024',
+    year: '2024',
+    onResume: true,
+    explore: {
+      preview: 'Observability for systems that have to stay up while people are sleeping.',
+      why: 'I wanted to see inside real infrastructure — shards, Kafka, the quiet work of noticing something before it pages you.',
+      learned: 'Designed Grafana dashboards with SQL to monitor organizations and shards in real time. Wired Prometheus HTTP endpoints into Grafana and Kubernetes so Kafka calls were actually visible.',
+      thinking: 'Proactive issue detection. Better incident response. Cross-team work with Kubernetes and Medusa to migrate microservices.',
+    },
+    hire: {
+      preview: 'Grafana + SQL observability; Prometheus/Kubernetes Kafka monitoring; microservice migration.',
+      bullets: [
+        'Designed and implemented a Grafana dashboard using SQL queries to identify baselines and monitor organizations and shards in real time, improving device health visibility and enabling proactive issue detection.',
+        'Developed a monitoring system for Kafka calls by integrating Prometheus HTTP endpoints with Grafana and Kubernetes, enhancing real-time observability and incident response.',
+        'Collaborated across teams, leveraging Kubernetes (k8s) and Medusa to optimize shard space and migrate microservices to the cloud.',
+      ],
+      tech: 'Grafana, SQL, Prometheus, Kubernetes, Kafka, Medusa',
+    },
+  },
+  {
+    id: 'cisco-2023',
+    title: 'Cisco Meraki',
+    role: 'Full Stack Software Engineer Intern',
+    when: 'May 2023 – Dec 2023',
+    year: '2023',
+    onResume: true,
+    explore: {
+      preview: 'The internship that got extended because the problem was bigger than a summer.',
+      why: 'Distributed systems are just people agreeing, slowly, through machines.',
+      learned: 'Contributed to dynamic shard reorganization for enterprise-scale customers. Built a Ruby testing framework that simulated production client networks.',
+      thinking: 'Extended through the fall. Learned how much of systems work is talking to nine teams until the SLO is a sentence everyone can live with.',
+    },
+    hire: {
+      preview: 'Dynamic shard reorganization; Ruby test architecture simulating production networks.',
+      bullets: [
+        'Contributed to Cisco Meraki’s dynamic shard reorganization initiative supporting enterprise-scale customers.',
+        'Designed a Ruby testing framework capable of simulating customer production networks for end-to-end validation.',
+        'Internship extended through the fall session.',
+      ],
+      tech: 'Distributed systems, Ruby, shard reorganization, end-to-end testing',
+    },
+  },
+  {
+    id: 'trusshealth',
+    title: 'TrussHealth',
+    role: 'AI Data Engineering + Product Design',
+    when: 'Mar 2023 – May 2023',
+    year: '2023',
+    onResume: false,
+    explore: {
+      preview: 'A dataset that did not exist yet, grown from the messy internet.',
+      why: 'Models are only as honest as the data you feed them.',
+      learned: 'Built a custom scraping workflow to extract, filter, and label images from online communities. Piped them into a searchable internal dataset.',
+      thinking: 'Cut manual collection time by ~80% so the team could actually start modeling.',
+    },
+    hire: {
+      preview: 'Scraping workflow and dataset pipeline; ~80% less manual collection.',
+      bullets: [
+        'Built a custom scraping workflow to extract, filter, and label high-quality images from online communities for early model development.',
+        'Created a pipeline to download, normalize, categorize, and store images in a searchable internal dataset, reducing manual collection time by ~80%.',
+      ],
+      tech: 'Web scraping, data pipelines, image datasets',
+    },
+  },
+  {
+    id: 'habu',
+    title: 'Habu',
+    role: 'Full Stack Software Engineer Intern',
+    when: 'May 2022 – Aug 2022',
+    year: '2022',
+    onResume: true,
+    explore: {
+      preview: 'Go backends, Grafana, Snowflake, and a dashboard that wrote itself.',
+      why: 'If analysts cannot experiment in place, they will invent a worse process in a spreadsheet.',
+      learned: 'Backend features in Go. Grafana and Prometheus for monitoring. DBT with Snowflake. Jupyter and Snowpark in the API. A Python-generated HTML database overview.',
+      thinking: 'Also: made the UI consistent, added frontend tests, and modified Metabase at the source because the plugin was not enough.',
+    },
+    hire: {
+      preview: 'Go backends; Grafana/Prometheus; DBT + Snowflake; auto-generated database overviews.',
+      bullets: [
+        'Implemented backend features in Go and integrated open-source tools into the Habu platform, including Grafana and Prometheus for internal monitoring, DBT with Snowflake for data pipelines, and Jupyter Notebook + Snowpark in backend APIs.',
+        'Developed an automated database overview dashboard in Python, generating HTML reports to improve database visibility and engineering productivity.',
+        'Modernized the platform UI for consistency and expanded frontend unit test coverage to improve reliability.',
+      ],
+      tech: 'Go, Grafana, Prometheus, DBT, Snowflake, Snowpark, Jupyter, Python, Metabase',
+    },
+  },
+]

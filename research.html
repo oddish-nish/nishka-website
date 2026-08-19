@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Nishka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Monoton&family=Unbounded&family=Orbitron:wght@500&family=Wire+One&family=Fredoka&family=Luckiest+Guy&family=Caveat+Brush&family=Press+Start+2P&family=Bungee+Outline&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">nishka</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="curiosity.html" class="nav-link">brain</a>
+                <a href="projects.html" class="nav-link">work</a>
+                <a href="creative.html" class="nav-link">heart</a>
+                <a href="about.html" class="nav-link">soul</a>
+                <a href="research.html" class="nav-link active">research</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Research Section -->
+    <section class="page-hero research-hero">
+        <div class="container">
+            <h1 class="page-title">Research I've Loved</h1>
+            <p class="page-subtitle">Academic curiosity, applied</p>
+        </div>
+    </section>
+
+    <section class="section research-section">
+        <div class="container">
+            <div class="explanation-toggle">
+                <button class="toggle-btn active" data-mode="simple">Explain like I'm 5</button>
+                <button class="toggle-btn" data-mode="technical">Explain like I'm a reviewer</button>
+            </div>
+
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3 class="card-title">Project Title</h3>
+                    <div class="card-content simple-mode">
+                        <p class="what-studied"><strong>What I studied:</strong> How people make decisions when they're stressed.</p>
+                        <p class="why-cared"><strong>Why I cared:</strong> Because understanding human behavior under pressure helps us build better systems and support each other better.</p>
+                        <p class="what-did"><strong>What I actually did:</strong> Ran experiments, analyzed data, talked to real people about their experiences.</p>
+                        <p class="what-taught"><strong>What it taught me:</strong> Stress changes everything, and small design choices can make big differences in how people feel and act.</p>
+                    </div>
+                    <div class="card-content technical-mode" style="display: none;">
+                        <p class="what-studied"><strong>What I studied:</strong> Cognitive load theory and decision-making heuristics under acute stress conditions.</p>
+                        <p class="why-cared"><strong>Why I cared:</strong> The intersection of behavioral psychology and system design reveals critical failure modes in human-computer interaction.</p>
+                        <p class="what-did"><strong>What I actually did:</strong> Conducted mixed-methods research combining controlled laboratory experiments (n=120) with semi-structured interviews, employing both quantitative analysis (ANOVA, regression models) and thematic analysis.</p>
+                        <p class="what-taught"><strong>What it taught me:</strong> Stress-induced cognitive narrowing significantly impacts decision quality, and interface design can mitigate or exacerbate these effects through information architecture and feedback mechanisms.</p>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <h3 class="card-title">Another Project</h3>
+                    <div class="card-content simple-mode">
+                        <p class="what-studied"><strong>What I studied:</strong> How computers can help us understand language better.</p>
+                        <p class="why-cared"><strong>Why I cared:</strong> Language is how we connect, and I wanted to see if machines could help us understand each other more deeply.</p>
+                        <p class="what-did"><strong>What I actually did:</strong> Built models, trained them on lots of text, tested how well they understood context and emotion.</p>
+                        <p class="what-taught"><strong>What it taught me:</strong> Machines can find patterns we miss, but they still don't understand the human experience behind words.</p>
+                    </div>
+                    <div class="card-content technical-mode" style="display: none;">
+                        <p class="what-studied"><strong>What I studied:</strong> Natural language processing and computational linguistics, specifically contextual embeddings and sentiment analysis.</p>
+                        <p class="why-cared"><strong>Why I cared:</strong> Advancing NLP capabilities has implications for human-computer interaction, accessibility, and cross-cultural communication systems.</p>
+                        <p class="what-did"><strong>What I actually did:</strong> Developed transformer-based models (BERT variants) fine-tuned on domain-specific corpora, evaluated using F1 scores, precision-recall curves, and human evaluation metrics.</p>
+                        <p class="what-taught"><strong>What it taught me:</strong> While transformer architectures capture syntactic and semantic patterns effectively, they lack genuine comprehension of pragmatic meaning and cultural context, revealing fundamental limitations in current approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-ending">You've reached the end.<br>Or maybe just a pause.</p>
+            <a href="index.html" class="footer-return-btn">Return to the beginning</a>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Modal -->
+    <div class="easter-egg-modal" id="easter-egg-modal">
+        <div class="easter-egg-content">
+            <p class="easter-egg-message" id="easter-egg-message"></p>
+            <button class="easter-egg-close" id="easter-egg-close" aria-label="Close">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

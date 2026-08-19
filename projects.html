@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Nishka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Monoton&family=Unbounded&family=Orbitron:wght@500&family=Wire+One&family=Fredoka&family=Luckiest+Guy&family=Caveat+Brush&family=Press+Start+2P&family=Bungee+Outline&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">nishka</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="curiosity.html" class="nav-link">brain</a>
+                <a href="projects.html" class="nav-link active">work</a>
+                <a href="creative.html" class="nav-link">heart</a>
+                <a href="about.html" class="nav-link">soul</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero projects-hero">
+        <div class="container">
+            <h1 class="page-title">Work</h1>
+            <p class="page-subtitle">Work answers some of them. This is execution.</p>
+            <p class="page-subtitle" style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.8;">This is where curiosity becomes action.</p>
+        </div>
+    </section>
+
+    <!-- View Toggle -->
+    <section class="section view-toggle-section">
+        <div class="container">
+            <div class="view-toggle-container">
+                <p class="view-toggle-label">Viewing this as:</p>
+                <div class="view-toggle">
+                    <label class="view-toggle-option">
+                        <input type="radio" name="view-mode" value="exploring" checked>
+                        <span class="view-toggle-text">Exploring</span>
+                    </label>
+                    <label class="view-toggle-option">
+                        <input type="radio" name="view-mode" value="hiring">
+                        <span class="view-toggle-text">Hiring</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lately Section -->
+    <section class="section lately-section">
+        <div class="container">
+            <h2 class="section-title" data-explore>Lately</h2>
+            <h2 class="section-title" data-hire style="display: none;">Recent Work</h2>
+            <p class="section-subtitle" data-explore>Recent competitions & experiments</p>
+            <p class="section-subtitle" data-hire style="display: none;">Recent competitions & achievements</p>
+            
+            <div class="lately-grid">
+                <div class="lately-item">
+                    <div class="lately-badge">🏆 Winner</div>
+                    <h3 class="lately-title">Order's Up</h3>
+                    <div class="lately-preview">
+                        <p class="lately-description">
+                            <strong>SensAI Hack 2025 - San Francisco</strong><br>
+                            <span style="opacity: 0.9;">Winner Mixed & Virtual Reality Category by Meta (1st Place)</span><br>
+                            <span style="opacity: 0.9;">Winner Best Implementation of Hand Tracking by Meta (1st Place)</span>
+                        </p>
+                    </div>
+                    <div class="lately-expanded" style="display: none;">
+                        <p class="lately-description">
+                            <strong>SensAI Hack 2025 - San Francisco</strong><br>
+                            <span style="opacity: 0.9;">Winner Mixed & Virtual Reality Category by Meta (1st Place)</span><br>
+                            <span style="opacity: 0.9;">Winner Best Implementation of Hand Tracking by Meta (1st Place)</span><br><br>
+                            <span data-explore>What if you could turn your living room into a chaotic kitchen where you and your friends frantically cook together? That's Order's Up. The magic isn't in the tech—it's in those moments when someone catches a flying tomato and the whole room erupts. A game anyone can understand in seconds, where the learning curve is tiny and the chaos curve is huge.</span>
+                            <span data-hire style="display: none;">Co-located MR cooking game built with Meta XR SDK. Features shared spatial anchors, hand-tracking, spatial audio, and Photon Fusion networking. Players collaborate to prepare ingredients and serve customers using hand gestures only.</span>
+                        </p>
+                        <a href="https://devpost.com/software/dinerdash" target="_blank" rel="noopener noreferrer" class="lately-link">View on Devpost →</a>
+                    </div>
+                    <button class="lately-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+                
+                <div class="lately-item">
+                    <div class="lately-badge">🏆 Winner</div>
+                    <h3 class="lately-title">The Tired Research Assistant's Assistant</h3>
+                    <div class="lately-preview">
+                        <p class="lately-description">
+                            <strong>hack-use by cua</strong><br>
+                            <span style="opacity: 0.9;">3rd Place</span>
+                        </p>
+                    </div>
+                    <div class="lately-expanded" style="display: none;">
+                        <p class="lately-description">
+                            <strong>hack-use by cua</strong><br>
+                            <span style="opacity: 0.9;">3rd Place</span><br><br>
+                            <span data-explore>I've been that undergrad research assistant stuck doing grunt work. I built a scraper that worked perfectly—until a minor UI update broke everything. The science hadn't changed, but the tooling collapsed. This project was born from that frustration. What if we built something that sees the screen like a human would, something that adapts when things change? The goal isn't to replace scientific thinking—it's to let researchers actually do research.</span>
+                            <span data-hire style="display: none;">Computer-Using Agent (CUA) that automates research assistant tasks by interacting with scientific websites like a human researcher. Navigates RCSB Protein Data Bank, extracts gene metadata, and writes structured CSV files. Robust to UI changes through visual reasoning rather than hardcoded selectors. Includes Streamlit dashboard for data visualization.</span>
+                        </p>
+                        <a href="https://devpost.com/software/the-tired-research-assistant-s-assistant?ref_content=user-portfolio&ref_feature=in_progress" target="_blank" rel="noopener noreferrer" class="lately-link">View on Devpost →</a>
+                    </div>
+                    <button class="lately-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+                
+                <div class="lately-item">
+                    <div class="lately-badge">📝 Finalist</div>
+                    <h3 class="lately-title">Rabbit Hole</h3>
+                    <div class="lately-preview">
+                        <p class="lately-description">
+                            <strong>Google AI Studio Competition on Kaggle</strong>
+                        </p>
+                    </div>
+                    <div class="lately-expanded" style="display: none;">
+                        <p class="lately-description">
+                            <strong>Google AI Studio Competition on Kaggle</strong><br><br>
+                            <span data-explore>Learning used to be exciting. One question could open an entire world, but somewhere along the way we stopped exploring and started accepting quick answers. Rabbit Hole brings back that spark. Instead of giving a direct answer, it turns any question into a guided journey—an expanding map of connected ideas, misconceptions, real-life examples, and simple experiments you can try yourself. Built entirely with Gemini 3 Pro, designed to help people think, question, and understand through curiosity again.</span>
+                            <span data-hire style="display: none;">Curiosity-first learning tool powered by Gemini 3 Pro. Transforms questions into guided journeys with expanding maps of connected ideas, misconceptions, examples, and experiments. Uses Gemini's multimodality for adaptive explanations (diagrams, visuals, stories, analogies, audio). Features personalized exploration, bookmarking, understanding tests, and dark mode. Built entirely in Google AI Studio.</span>
+                        </p>
+                        <a href="https://www.kaggle.com/competitions/gemini-3/writeups/new-writeup-1765346052606" target="_blank" rel="noopener noreferrer" class="lately-link">View on Kaggle →</a>
+                    </div>
+                    <button class="lately-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+                
+                <div class="lately-item">
+                    <div class="lately-badge">🏆 Winner</div>
+                    <h3 class="lately-title">Bad Pitch Competition</h3>
+                    <div class="lately-preview">
+                        <p class="lately-description">
+                            <strong>Evernomics & Playful Sincerity</strong><br>
+                            <span style="opacity: 0.9;">Best Delivery</span>
+                        </p>
+                    </div>
+                    <div class="lately-expanded" style="display: none;">
+                        <p class="lately-description">
+                            <strong>Evernomics & Playful Sincerity</strong><br>
+                            <span style="opacity: 0.9;">Best Delivery</span><br><br>
+                            <span data-explore>I competed in a Bad Ideas Pitch Competition where the goal was to pitch a deliberately terrible idea as convincingly as possible. I ended up pitching a gamified dog-poop cleanup app, which forced me to think seriously about audience, incentives, and storytelling for something inherently ridiculous. I won Best Delivery, mostly because I committed fully and learned how much conviction and framing matter. It was a fun way to learn how pitches work, how people buy into ideas, and how to make even bad ones sound compelling.</span>
+                            <span data-hire style="display: none;">Invented and pitched an intentionally terrible idea (gamified dog-poop cleanup app) with focus on market framing, user incentives, and storytelling. Won Best Delivery. Sharpened skills in communicating value, structuring narratives, and selling ideas with confidence. Practiced distilling complex ideas into compelling pitches and thinking critically about audience, positioning, and feasibility.</span>
+                        </p>
+                    </div>
+                    <button class="lately-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering / Projects Section -->
+    <section class="section building-section">
+        <div class="container">
+            <h2 class="section-title" data-explore>Engineering & Projects</h2>
+            <h2 class="section-title" data-hire style="display: none;">Engineering & Projects</h2>
+            <p class="section-subtitle" data-explore>Systems I've built</p>
+            <p class="section-subtitle" data-hire style="display: none;">Systems I've built</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="serious">Serious Builds</button>
+                <button class="tab-btn" data-tab="playground">Playground Builds</button>
+            </div>
+
+            <div class="tab-content active" id="serious-tab">
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>Cisco Meraki — Infrastructure & Systems</h3>
+                    <h3 class="project-title" data-hire style="display: none;">Cisco Meraki — Infrastructure & Systems</h3>
+                    <p class="project-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Full Stack Software Engineer Intern | May 2024 – Aug 2024</p>
+                    <div class="project-preview">
+                        <div data-explore>
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Key Achievements:</strong> Built observability pipelines, integrated monitoring systems, migrated microservices to cloud-native architecture.</p>
+                        </div>
+                    </div>
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-details">
+                            <div data-explore>
+                                <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                                <p class="approach"><strong>What I learned:</strong> Built real-time Grafana dashboards powered by SQL to track organization health and shard utilization. Integrated Prometheus HTTP endpoints with Kubernetes for monitoring Kafka calls. Partnered with multiple infra teams to migrate microservices to cloud-native architecture.</p>
+                                <p class="outcome"><strong>How I think:</strong> Improved visibility by 35%, enabled 20+ critical issues to be preemptively detected, reduced incident detection time by ~40%, improved on-call efficiency, migrated 15+ microservices improving scalability and system resilience.</p>
+                            </div>
+                            <div data-hire style="display: none;">
+                                <p class="problem"><strong>Key Achievements:</strong></p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                                    <li>Built real-time Grafana dashboards powered by SQL to track organization health and shard utilization, improving visibility by 35% and enabling 20+ critical issues to be preemptively detected</li>
+                                    <li>Integrated Prometheus HTTP endpoints with Kubernetes (k8s) for monitoring Kafka calls, reducing incident detection time by ~40% and improving on-call efficiency</li>
+                                    <li>Partnered with multiple infra teams to migrate 15+ microservices to cloud-native architecture, improving scalability and system resilience</li>
+                                </ul>
+                                <p class="redo" style="margin-top: 1rem;"><strong>Technologies:</strong> Grafana, SQL, Prometheus, Kubernetes, Kafka, Microservices, Cloud-native architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="project-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>Cisco Meraki — Distributed Systems</h3>
+                    <h3 class="project-title" data-hire style="display: none;">Cisco Meraki — Distributed Systems</h3>
+                    <p class="project-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Full Stack Software Engineer Intern | May 2023 – Dec 2023</p>
+                    <div class="project-preview">
+                        <div data-explore>
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Key Achievements:</strong> Designed shard reorganization logic, coordinated cross-functional teams, established SLOs.</p>
+                        </div>
+                    </div>
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-details">
+                            <div data-explore>
+                                <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                                <p class="approach"><strong>What I learned:</strong> Designed and delivered dynamic shard reorganization logic for enterprise clients with multi-region networks. Coordinated with cross-functional teams to define shard migration strategy and establish system-level SLOs.</p>
+                                <p class="outcome"><strong>How I think:</strong> Improved system efficiency for enterprise clients. Worked with 9+ teams to establish SLOs for uptime and reliability. Internship extended to fall session for an extra 4 months.</p>
+                            </div>
+                            <div data-hire style="display: none;">
+                                <p class="problem"><strong>Key Achievements:</strong></p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                                    <li>Designed + delivered dynamic shard reorganization logic improving system efficiency for enterprise clients with multi-region networks</li>
+                                    <li>Coordinated with 9+ cross-functional teams to define shard migration strategy and establish system-level SLOs for uptime and reliability</li>
+                                    <li>Internship extended to fall session for an extra 4 months</li>
+                                </ul>
+                                <p class="redo" style="margin-top: 1rem;"><strong>Technologies:</strong> Distributed systems, Shard reorganization, SLOs, Cross-functional collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="project-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>TrussHealth — AI Data Engineering</h3>
+                    <h3 class="project-title" data-hire style="display: none;">TrussHealth — AI Data Engineering</h3>
+                    <p class="project-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">AI Data Engineering + Product Design | Mar 2023 – May 2023</p>
+                    <div class="project-preview">
+                        <div data-explore>
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Key Achievements:</strong> Built custom scraping workflow, created data pipeline, reduced manual collection time by 80%.</p>
+                        </div>
+                    </div>
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-details">
+                            <div data-explore>
+                                <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                                <p class="approach"><strong>What I learned:</strong> Built a custom scraping workflow to extract, filter, and label high-quality images from Facebook posts and online communities. Created a pipeline to download, normalize, categorize and store scraped images into a searchable internal dataset.</p>
+                                <p class="outcome"><strong>How I think:</strong> Enabled the team to grow an initial dataset for early model development. Reduced manual data collection time by ~80%.</p>
+                            </div>
+                            <div data-hire style="display: none;">
+                                <p class="problem"><strong>Key Achievements:</strong></p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                                    <li>Built a custom scraping workflow to extract, filter, and label high-quality images from Facebook posts and online communities, enabling the team to grow an initial dataset for early model development</li>
+                                    <li>Created a pipeline to download, normalize, categorize and store scraped images into a searchable internal dataset, reducing manual data collection time by ~80%</li>
+                                </ul>
+                                <p class="redo" style="margin-top: 1rem;"><strong>Technologies:</strong> Web scraping, Data pipelines, Image processing, Dataset management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="project-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>Habu — Data Infrastructure</h3>
+                    <h3 class="project-title" data-hire style="display: none;">Habu — Data Infrastructure</h3>
+                    <p class="project-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Full Stack Software Engineer Intern | May 2022 – Aug 2022</p>
+                    <div class="project-preview">
+                        <div data-explore>
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem" style="margin-bottom: 0.5rem;"><strong>Key Achievements:</strong> Built observability pipelines, streamlined ETL pipelines, embedded data experimentation tools.</p>
+                        </div>
+                    </div>
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-details">
+                            <div data-explore>
+                                <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                                <p class="approach"><strong>What I learned:</strong> Built internal observability pipelines using Grafana + Prometheus. Streamlined ETL pipelines with DBT, Python, and Snowflake. Embedded Snowpark + Jupyter APIs for in-app data experimentation.</p>
+                                <p class="outcome"><strong>How I think:</strong> Reduced data incident response times. Cut debugging time and improved reliability of production data jobs. Improved ML integration workflow for analysts.</p>
+                            </div>
+                            <div data-hire style="display: none;">
+                                <p class="problem"><strong>Key Achievements:</strong></p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                                    <li>Built internal observability pipelines using Grafana + Prometheus, reducing data incident response times</li>
+                                    <li>Streamlined ETL pipelines with DBT, Python, and Snowflake, cutting debugging time and improving reliability of production data jobs</li>
+                                    <li>Embedded Snowpark + Jupyter APIs for in-app data experimentation, improving ML integration workflow for analysts</li>
+                                </ul>
+                                <p class="redo" style="margin-top: 1rem;"><strong>Technologies:</strong> Grafana, Prometheus, DBT, Python, Snowflake, Snowpark, Jupyter, ETL pipelines</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="project-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="playground-tab" style="display: none;">
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>AI Agent Experiment</h3>
+                    <h3 class="project-title" data-hire style="display: none;">AI Agent Experiment</h3>
+                    <div class="project-details">
+                        <div data-explore>
+                            <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                            <p class="approach"><strong>What I learned:</strong> What if AI could help me think through problems out loud? I built a conversational agent that asks clarifying questions and helps structure thinking.</p>
+                            <p class="outcome"><strong>How I think:</strong> A weirdly helpful thinking companion that sometimes surprises me with insights.</p>
+                            <p class="proud"><strong>One spicy technical decision:</strong> Used few-shot learning instead of fine-tuning. Faster iteration, more flexible.</p>
+                            <p class="redo"><strong>One thing I'd redo:</strong> Add memory so it remembers our previous conversations. Context is everything.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem"><strong>Problem:</strong> Need for AI-powered thinking companion.</p>
+                            <p class="approach"><strong>Solution:</strong> Built a conversational agent that asks clarifying questions and helps structure thinking.</p>
+                            <p class="outcome"><strong>Impact:</strong> Created a helpful thinking companion that provides insights.</p>
+                            <p class="proud"><strong>Key Technical Decision:</strong> Used few-shot learning instead of fine-tuning for faster iteration.</p>
+                            <p class="redo"><strong>Technologies:</strong> Conversational AI, Few-shot learning, Natural language processing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title" data-explore>Weird Idea Generator</h3>
+                    <h3 class="project-title" data-hire style="display: none;">Weird Idea Generator</h3>
+                    <div class="project-details">
+                        <div data-explore>
+                            <p class="problem"><strong>Why I built this:</strong> I like building things that start as questions. Sometimes they turn into tools. Sometimes they just teach me something.</p>
+                            <p class="approach"><strong>What I learned:</strong> Sometimes I need to break out of conventional thinking. I built a tool that combines random concepts and constraints to generate creative prompts.</p>
+                            <p class="outcome"><strong>How I think:</strong> A delightful chaos machine that occasionally produces genuinely interesting ideas.</p>
+                            <p class="proud"><strong>One spicy technical decision:</strong> Used graph algorithms to find unexpected connections between concepts.</p>
+                            <p class="redo"><strong>One thing I'd redo:</strong> Make it collaborative. Ideas are better when shared.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="problem"><strong>Problem:</strong> Need for creative idea generation tool.</p>
+                            <p class="approach"><strong>Solution:</strong> Built a tool that combines random concepts and constraints to generate creative prompts.</p>
+                            <p class="outcome"><strong>Impact:</strong> Created a tool that produces genuinely interesting ideas.</p>
+                            <p class="proud"><strong>Key Technical Decision:</strong> Used graph algorithms to find unexpected connections between concepts.</p>
+                            <p class="redo"><strong>Technologies:</strong> Graph algorithms, Concept mapping, Creative prompt generation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section research-section">
+        <div class="container">
+            <h2 class="section-title" data-explore>Research</h2>
+            <h2 class="section-title" data-hire style="display: none;">Research</h2>
+            <p class="section-subtitle" data-explore>Academic curiosity, applied</p>
+            <p class="section-subtitle" data-hire style="display: none;">Academic research & publications</p>
+            
+            <div class="explanation-toggle" data-explore>
+                <button class="toggle-btn active" data-mode="simple">Explain like I'm 5</button>
+                <button class="toggle-btn" data-mode="technical">Explain like I'm a reviewer</button>
+            </div>
+
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-question" data-explore>
+                        <p><em>How do we automate scientific data collection?</em></p>
+                    </div>
+                    <h3 class="card-title">UCSF — Research Assistant and Author</h3>
+                    <p class="research-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">University of California, San Francisco | July 2024 – Present</p>
+                    <div class="research-preview">
+                        <div data-explore>
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>What I studied:</strong> Automating protein data extraction and validation from scientific databases.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>Research Focus:</strong> Automated data extraction, cleaning, and validation systems for scientific databases.</p>
+                        </div>
+                    </div>
+                    <div class="research-expanded" style="display: none;">
+                        <div class="card-content" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Automating protein data extraction and validation from scientific databases.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> Manual data collection was taking months. I wanted to see if automation could turn that into something faster and more reliable.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Developed a Selenium-based scraping system to automate extraction, cleaning, and validation. Converted a months-long manual process into a one-day automated pipeline through custom parsers and structured design.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> Collaborated with researchers to integrate curated datasets into early-stage modeling experiments. Automation doesn't replace scientific thinking—it frees up time for the actual research.</p>
+                        </div>
+                        <div class="card-content" style="display: none;" data-hire>
+                            <p class="what-studied"><strong>Research Focus:</strong> Automated data extraction, cleaning, and validation systems for scientific databases</p>
+                            <p class="what-did"><strong>Methods:</strong> Developed Selenium-based scraping system with custom parsers and structured design for protein data extraction</p>
+                            <p class="what-taught"><strong>Key Achievements:</strong> Converted months-long manual process into one-day automated pipeline; integrated curated datasets into early-stage modeling experiments</p>
+                            <p class="why-cared"><strong>Technologies:</strong> Selenium, Python, Data parsing, Data validation, Scientific databases</p>
+                        </div>
+                    </div>
+                    <button class="research-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-question" data-explore>
+                        <p><em>How do mindsets shape achievement?</em></p>
+                    </div>
+                    <h3 class="card-title">Hope Laboratory — Research Assistant Intern</h3>
+                    <p class="research-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Michigan State University | Jun 2020 – Sep 2021</p>
+                    <div class="research-preview">
+                        <div data-explore>
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>What I studied:</strong> Correlation between student mindsets and achievement outcomes.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>Research Focus:</strong> Student mindset research and statistical analysis of achievement outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="research-expanded" style="display: none;">
+                        <div class="card-content simple-mode" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Correlation between student mindsets and achievement outcomes.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> I wanted to understand how the way students think about learning affects what they actually achieve.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Co-authored and presented a research paper supported by statistical analysis on quantitative datasets of 600+ students. Analyzed data, brainstormed framework for papers, and drafted thesis statements.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> How to structure research questions, analyze large datasets, and communicate findings. The process of turning data into insights.</p>
+                        </div>
+                        <div class="card-content technical-mode" style="display: none;" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Correlation between student mindset constructs and academic achievement outcomes using quantitative statistical analysis.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> Understanding the relationship between psychological constructs (mindset) and behavioral outcomes (achievement) has implications for educational interventions and student support systems.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Co-authored and presented a research paper analyzing quantitative datasets (n=600+) using statistical methods. Conducted data analysis, developed theoretical framework, and drafted thesis statements. Applied statistical analysis to examine correlations between mindset variables and achievement metrics.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> Quantitative research methodology, statistical analysis techniques, research paper structure and presentation, and the process of translating empirical findings into academic communication.</p>
+                        </div>
+                        <div class="card-content" style="display: none;" data-hire>
+                            <p class="what-studied"><strong>Research Focus:</strong> Student mindset research and statistical analysis of achievement outcomes</p>
+                            <p class="what-did"><strong>Methods:</strong> Statistical analysis on quantitative datasets (n=600+), co-authored research paper, data analysis and framework development</p>
+                            <p class="what-taught"><strong>Key Achievements:</strong> Co-authored and presented research paper on correlation of student mindsets with consequent achievements</p>
+                            <p class="why-cared"><strong>Technologies:</strong> Statistical analysis, Quantitative research, Data analysis</p>
+                        </div>
+                    </div>
+                    <button class="research-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-question" data-explore>
+                        <p><em>How does attention work in multitasking?</em></p>
+                    </div>
+                    <h3 class="card-title">Purdue Cognition Lab — Research Assistant</h3>
+                    <p class="research-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Purdue University | Jan 2022 – Aug 2022</p>
+                    <div class="research-preview">
+                        <div data-explore>
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>What I studied:</strong> Attention and cognitive control in multitasking and multi-sensory contexts.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>Research Focus:</strong> Cognitive control, attention, and multi-sensory processing in multitasking contexts.</p>
+                        </div>
+                    </div>
+                    <div class="research-expanded" style="display: none;">
+                        <div class="card-content simple-mode" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Attention and cognitive control in multitasking and multi-sensory contexts.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> I wanted to understand how people process information when multiple senses are involved, and how that affects their ability to focus.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Partnered on a study to understand correlation between sensory information and cognitive processes including touch, sight, and sound. Developed scientific hypotheses and testing metrics. Began a new study on sensory information and cognitive senses.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> How to design experiments, develop hypotheses, and think about cognitive processes systematically.</p>
+                        </div>
+                        <div class="card-content technical-mode" style="display: none;" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Attention and cognitive control mechanisms in multitasking environments and multi-sensory processing contexts.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> Understanding how attentional resources are allocated across multiple sensory modalities and tasks has implications for cognitive load theory and human-computer interaction design.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Partnered on research examining correlations between sensory information (tactile, visual, auditory) and cognitive processes. Developed scientific hypotheses, designed testing metrics, and initiated new studies on multi-sensory integration and cognitive control.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> Experimental design in cognitive psychology, hypothesis development, metric construction for cognitive research, and systematic approaches to studying multi-sensory processing.</p>
+                        </div>
+                        <div class="card-content" style="display: none;" data-hire>
+                            <p class="what-studied"><strong>Research Focus:</strong> Cognitive control, attention, and multi-sensory processing in multitasking contexts</p>
+                            <p class="what-did"><strong>Methods:</strong> Experimental design, hypothesis development, testing metrics, multi-sensory research (touch, sight, sound)</p>
+                            <p class="what-taught"><strong>Key Achievements:</strong> Partnered on study understanding correlation between sensory information and cognitive processes; developed scientific hypotheses and testing metrics</p>
+                            <p class="why-cared"><strong>Technologies:</strong> Experimental design, Cognitive research methods</p>
+                        </div>
+                    </div>
+                    <button class="research-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-question" data-explore>
+                        <p><em>How do people make decisions under pressure?</em></p>
+                    </div>
+                    <h3 class="card-title">Purdue Lab of Cognitive & Computational Neuroscience</h3>
+                    <p class="research-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Purdue University | Aug 2021 – Jan 2022</p>
+                    <div class="research-preview">
+                        <div data-explore>
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>What I studied:</strong> Intuitive decision-making and creative problem-solving in high-stake scenarios.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>Research Focus:</strong> Decision-making, pattern recognition, and cognitive processes in high-stake scenarios.</p>
+                        </div>
+                    </div>
+                    <div class="research-expanded" style="display: none;">
+                        <div class="card-content simple-mode" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Intuitive decision-making and creative problem-solving in high-stake scenarios.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> I wanted to understand how people's decisions change when the stakes are high, and how that relates to their ability to process patterns.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Collaborated with a 5-member team on projects examining how people's decisions are impacted in high-stake scenarios and correlated it with their ability to efficiently and accurately categorize patterns and datasets using computers and EEG. Collected and organized raw data through behavioral experiments and pre-stimuli testing.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> How to work in research teams, collect behavioral data, and use tools like EEG to understand cognitive processes.</p>
+                        </div>
+                        <div class="card-content technical-mode" style="display: none;" data-explore>
+                            <p class="what-studied"><strong>What I studied:</strong> Intuitive decision-making processes and creative problem-solving strategies in high-stake decision environments, examining correlations with pattern recognition and categorization abilities.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> Understanding how decision-making processes adapt under pressure and how this relates to cognitive pattern recognition has implications for understanding human performance in critical situations.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Collaborated with a 5-member research team examining decision-making in high-stake scenarios. Correlated decision outcomes with pattern categorization performance using computer-based assessments and EEG neuroimaging. Collected and organized raw behavioral data through controlled experiments and pre-stimuli testing protocols.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> Collaborative research methodology, behavioral data collection, EEG data acquisition and analysis, experimental design for cognitive research, and statistical analysis of decision-making patterns.</p>
+                        </div>
+                        <div class="card-content" style="display: none;" data-hire>
+                            <p class="what-studied"><strong>Research Focus:</strong> Decision-making, pattern recognition, and cognitive processes in high-stake scenarios</p>
+                            <p class="what-did"><strong>Methods:</strong> Behavioral experiments, EEG data collection, pre-stimuli testing, pattern categorization tasks, computer-based assessments</p>
+                            <p class="what-taught"><strong>Key Achievements:</strong> Collaborated with 5-member team examining decision-making in high-stake scenarios; correlated with pattern recognition abilities; collected and organized raw data</p>
+                            <p class="why-cared"><strong>Technologies:</strong> EEG, Behavioral experiments, Data collection, Statistical analysis</p>
+                        </div>
+                    </div>
+                    <button class="research-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-question" data-explore>
+                        <p><em>How do we mentor the next generation of researchers?</em></p>
+                    </div>
+                    <h3 class="card-title">Purdue Research Fellow — Mentor & Leader</h3>
+                    <p class="research-meta" style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1rem;">Purdue Undergrad Research Office + Research Honors Student Board</p>
+                    <div class="research-preview">
+                        <div data-explore>
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>What I did:</strong> Mentored students through their research journeys from conducting research to presenting at conferences.</p>
+                        </div>
+                        <div data-hire style="display: none;">
+                            <p class="what-studied" style="margin-bottom: 0.5rem;"><strong>Role:</strong> Research mentorship and leadership in undergraduate research programs.</p>
+                        </div>
+                    </div>
+                    <div class="research-expanded" style="display: none;">
+                        <div class="card-content simple-mode" data-explore>
+                            <p class="what-studied"><strong>What I did:</strong> Mentored 3 students through their research journeys from conducting research to presenting at conferences.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> I wanted to help other students navigate the research process and share what I'd learned along the way.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Provided guidance on research design, data collection, analysis, and presentation. Supported students in developing their research questions and communicating their findings.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> How to teach research skills, provide constructive feedback, and help others find their own research voice.</p>
+                        </div>
+                        <div class="card-content technical-mode" style="display: none;" data-explore>
+                            <p class="what-studied"><strong>What I did:</strong> Mentored 3 undergraduate students through complete research cycles, from initial question formulation through conference presentation.</p>
+                            <p class="why-cared"><strong>Why I cared:</strong> Effective research mentorship is critical for developing the next generation of researchers and ensuring knowledge transfer within academic communities.</p>
+                            <p class="what-did"><strong>What I actually did:</strong> Provided comprehensive guidance on research methodology, experimental design, data collection protocols, statistical analysis, and academic communication. Supported students in developing research questions, structuring investigations, and presenting findings at academic conferences.</p>
+                            <p class="what-taught"><strong>What it taught me:</strong> Pedagogical approaches to research training, constructive feedback methodologies, and how to facilitate independent research development while providing appropriate scaffolding.</p>
+                        </div>
+                        <div class="card-content" style="display: none;" data-hire>
+                            <p class="what-studied"><strong>Role:</strong> Research mentorship and leadership in undergraduate research programs</p>
+                            <p class="what-did"><strong>Responsibilities:</strong> Mentored 3 students through complete research cycles; provided guidance on research design, data collection, analysis, and presentation</p>
+                            <p class="what-taught"><strong>Key Achievements:</strong> Supported students from initial research questions through conference presentations</p>
+                            <p class="why-cared"><strong>Skills:</strong> Research mentorship, Teaching, Leadership, Communication</p>
+                        </div>
+                    </div>
+                    <button class="research-expand-btn" aria-label="Expand">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-ending">You've reached the end.<br>Or maybe just a pause.</p>
+            <a href="index.html" class="footer-return-btn">Return to the beginning</a>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Modal -->
+    <div class="easter-egg-modal" id="easter-egg-modal">
+        <div class="easter-egg-content">
+            <p class="easter-egg-message" id="easter-egg-message"></p>
+            <button class="easter-egg-close" id="easter-egg-close" aria-label="Close">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // View Mode Toggle - Exploring vs Hiring
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewToggleInputs = document.querySelectorAll('input[name="view-mode"]');
+            const workContent = document.querySelectorAll('[data-explore], [data-hire]');
+            let toggleCount = 0;
+            let lastMode = 'exploring';
+            let easterEggShown = false;
+            
+            // Create easter egg message element
+            const easterEggMessage = document.createElement('div');
+            easterEggMessage.className = 'toggle-easter-egg';
+            easterEggMessage.innerHTML = '<p>You\'re allowed to be both, you know. I\'m always down to collaborate on a project with a fellow curious mind.</p>';
+            easterEggMessage.style.display = 'none';
+            document.querySelector('.view-toggle-section .container').appendChild(easterEggMessage);
+            
+            function updateViewMode(mode) {
+                workContent.forEach(element => {
+                    if (mode === 'exploring') {
+                        // Show explore content, hide hire content
+                        if (element.hasAttribute('data-explore')) {
+                            element.style.display = '';
+                            element.classList.add('active');
+                        }
+                        if (element.hasAttribute('data-hire')) {
+                            element.style.display = 'none';
+                            element.classList.remove('active');
+                        }
+                    } else if (mode === 'hiring') {
+                        // Show hire content, hide explore content
+                        if (element.hasAttribute('data-hire')) {
+                            element.style.display = '';
+                            element.classList.add('active');
+                        }
+                        if (element.hasAttribute('data-explore')) {
+                            element.style.display = 'none';
+                            element.classList.remove('active');
+                        }
+                    }
+                });
+                
+                // Update body class for global styling
+                document.body.classList.toggle('hire-mode', mode === 'hiring');
+                document.body.classList.toggle('explore-mode', mode === 'exploring');
+            }
+            
+            viewToggleInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    const newMode = this.value;
+                    
+                    // Track toggle count (only count actual switches, not initial load)
+                    if (newMode !== lastMode) {
+                        toggleCount++;
+                        lastMode = newMode;
+                        
+                        // Show easter egg after 3 toggles
+                        if (toggleCount >= 3 && !easterEggShown) {
+                            easterEggShown = true;
+                            easterEggMessage.style.display = 'block';
+                            easterEggMessage.style.opacity = '0';
+                            easterEggMessage.style.transform = 'translateY(-10px)';
+                            
+                            // Fade in animation
+                            setTimeout(() => {
+                                easterEggMessage.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                                easterEggMessage.style.opacity = '1';
+                                easterEggMessage.style.transform = 'translateY(0)';
+                            }, 10);
+                        }
+                    }
+                    
+                    updateViewMode(newMode);
+                });
+            });
+            
+            // Initialize with exploring mode
+            updateViewMode('exploring');
+            
+            // Expandable cards functionality for Lately section
+            const expandButtons = document.querySelectorAll('.lately-expand-btn');
+            expandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const item = this.closest('.lately-item');
+                    const preview = item.querySelector('.lately-preview');
+                    const expanded = item.querySelector('.lately-expanded');
+                    
+                    if (item.classList.contains('expanded')) {
+                        item.classList.remove('expanded');
+                        preview.style.display = 'block';
+                        expanded.style.display = 'none';
+                        this.textContent = 'Read more';
+                    } else {
+                        item.classList.add('expanded');
+                        preview.style.display = 'none';
+                        expanded.style.display = 'block';
+                        this.textContent = 'Show less';
+                    }
+                });
+            });
+            
+            // Expandable cards functionality for Project cards
+            const projectExpandButtons = document.querySelectorAll('.project-expand-btn');
+            projectExpandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.project-card');
+                    const preview = card.querySelector('.project-preview');
+                    const expanded = card.querySelector('.project-expanded');
+                    
+                    if (card.classList.contains('expanded')) {
+                        card.classList.remove('expanded');
+                        preview.style.display = 'block';
+                        expanded.style.display = 'none';
+                        this.textContent = 'Read more';
+                    } else {
+                        card.classList.add('expanded');
+                        preview.style.display = 'none';
+                        expanded.style.display = 'block';
+                        this.textContent = 'Show less';
+                    }
+                });
+            });
+            
+            // Expandable cards functionality for Research cards
+            const researchExpandButtons = document.querySelectorAll('.research-expand-btn');
+            researchExpandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.research-card');
+                    const preview = card.querySelector('.research-preview');
+                    const expanded = card.querySelector('.research-expanded');
+                    
+                    if (card.classList.contains('expanded')) {
+                        card.classList.remove('expanded');
+                        preview.style.display = 'block';
+                        expanded.style.display = 'none';
+                        this.textContent = 'Read more';
+                    } else {
+                        card.classList.add('expanded');
+                        preview.style.display = 'none';
+                        expanded.style.display = 'block';
+                        this.textContent = 'Show less';
+                    }
+                });
+            });
+            
+            // Explanation toggle for Research section (Explain like I'm 5 vs Reviewer)
+            const explanationToggle = document.querySelector('.explanation-toggle');
+            if (explanationToggle) {
+                const toggleButtons = explanationToggle.querySelectorAll('.toggle-btn');
+                toggleButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const mode = this.getAttribute('data-mode');
+                        
+                        // Update button states
+                        toggleButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Show/hide content based on mode
+                        const researchCards = document.querySelectorAll('.research-card');
+                        researchCards.forEach(card => {
+                            const simpleContent = card.querySelectorAll('.simple-mode');
+                            const technicalContent = card.querySelectorAll('.technical-mode');
+                            
+                            if (mode === 'simple') {
+                                simpleContent.forEach(content => {
+                                    const expanded = content.closest('.research-expanded');
+                                    if (expanded && expanded.style.display !== 'none') {
+                                        content.style.display = 'block';
+                                    }
+                                });
+                                technicalContent.forEach(content => content.style.display = 'none');
+                            } else {
+                                simpleContent.forEach(content => content.style.display = 'none');
+                                technicalContent.forEach(content => {
+                                    const expanded = content.closest('.research-expanded');
+                                    if (expanded && expanded.style.display !== 'none') {
+                                        content.style.display = 'block';
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
