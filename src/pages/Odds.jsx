@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { shuffle } from '../lib/rng'
 import { useLiving } from '../lib/living'
+import { openEasterEgg } from '../components/EasterEggModal'
 
 function freshDeck(items, avoidId) {
   let next = shuffle(items, Math.random)
@@ -46,13 +47,21 @@ function Odds() {
   return (
     <section className="house-hallway hallway-odds">
       <div className="container hallway-inner no-kicker">
-        <h1 className="hallway-title">Odds</h1>
+        <h1 className="hallway-title">
+          <button
+            type="button"
+            className="hallway-title-egg"
+            onClick={() => openEasterEgg('Junk drawer. Organized by affection.')}
+          >
+            Odds
+          </button>
+        </h1>
         <p className="hallway-subtitle odds-subtitle">Things that didn’t get their own room.</p>
         <button type="button" className="odds-draw" onClick={draw}>
           <span className="odds-fact" key={current?.id || current?.text}>
             {current?.text}
           </span>
-          <span className="odds-hint">another</span>
+          <span className="odds-hint">click for another</span>
         </button>
       </div>
     </section>

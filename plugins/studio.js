@@ -11,6 +11,7 @@ const FILES = {
   philosophies: 'src/data/philosophies.js',
   learning: 'src/data/learning.js',
   facts: 'src/data/facts.js',
+  stories: 'src/data/stories.js',
 }
 
 const PHOTO_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif'])

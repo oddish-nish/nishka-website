@@ -21,6 +21,7 @@ const TAB_GROUPS = [
     label: 'heart',
     tabs: [
       { id: 'poems', label: 'poems' },
+      { id: 'stories', label: 'stories' },
       { id: 'quotes', label: 'quotes' },
       { id: 'plants', label: 'plants' },
       { id: 'photos', label: 'photos' },
@@ -42,6 +43,10 @@ const TAB_GROUPS = [
 ]
 
 function emptyPoem() {
+  return { title: '', body: '' }
+}
+
+function emptyStory() {
   return { title: '', body: '' }
 }
 
@@ -72,7 +77,7 @@ function emptyPlant() {
 }
 
 function emptyQuestion() {
-  return { text: '' }
+  return { text: '', note: '' }
 }
 
 function emptyTheory() {
@@ -140,9 +145,11 @@ function Studio() {
   const philosophies = useLiving('philosophies')
   const learning = useLiving('learning')
   const facts = useLiving('facts')
+  const stories = useLiving('stories')
   const [dropping, setDropping] = useState(false)
 
   const [poemForm, setPoemForm] = useState(emptyPoem)
+  const [storyForm, setStoryForm] = useState(emptyStory)
   const [quoteForm, setQuoteForm] = useState(emptyQuote)
   const [bookForm, setBookForm] = useState(emptyBook)
   const [plantForm, setPlantForm] = useState(emptyPlant)
@@ -161,6 +168,7 @@ function Studio() {
   const resetForms = () => {
     setEditingId(null)
     setPoemForm(emptyPoem())
+    setStoryForm(emptyStory())
     setQuoteForm(emptyQuote())
     setBookForm(emptyBook())
     setPlantForm(emptyPlant())
@@ -205,6 +213,15 @@ function Studio() {
     return saveNamed(event, 'poems', { title: poemForm.title.trim(), lines }, poemForm.title)
   }
 
+  const saveStory = (event) => {
+    event.preventDefault()
+    if (!storyForm.title.trim() || !storyForm.body.trim()) return
+    return saveNamed(event, 'stories', {
+      title: storyForm.title.trim(),
+      body: storyForm.body.trim(),
+    }, storyForm.title)
+  }
+
   const saveQuote = (event) => {
     event.preventDefault()
     if (!quoteForm.text.trim()) return
@@ -244,7 +261,10 @@ function Studio() {
   const saveQuestion = (event) => {
     event.preventDefault()
     if (!questionForm.text.trim()) return
-    return saveNamed(event, 'questions', { text: questionForm.text.trim() }, questionForm.text)
+    return saveNamed(event, 'questions', {
+      text: questionForm.text.trim(),
+      note: questionForm.note.trim(),
+    }, questionForm.text)
   }
 
   const saveTheory = (event) => {
@@ -276,6 +296,12 @@ function Studio() {
     setTab('poems')
     setEditingId(poem.id)
     setPoemForm({ title: poem.title, body: poemBody(poem.lines) })
+  }
+
+  const editStory = (story) => {
+    setTab('stories')
+    setEditingId(story.id)
+    setStoryForm({ title: story.title, body: story.body || '' })
   }
 
   const editQuote = (quote) => {
@@ -313,7 +339,7 @@ function Studio() {
   const editQuestion = (question) => {
     setTab('questions')
     setEditingId(question.id)
-    setQuestionForm({ text: question.text })
+    setQuestionForm({ text: question.text, note: question.note || '' })
   }
 
   const editTheory = (essay) => {
@@ -444,6 +470,32 @@ function Studio() {
         </section>
       )}
 
+      {tab === 'stories' && (
+        <section className="studio-panel">
+          <form className="studio-form" onSubmit={saveStory}>
+            <h2>{editingId ? 'Edit story' : 'New story'}</h2>
+            <label>
+              Title
+              <input value={storyForm.title} onChange={(e) => setStoryForm({ ...storyForm, title: e.target.value })} />
+            </label>
+            <label>
+              The story
+              <textarea
+                rows={14}
+                value={storyForm.body}
+                onChange={(e) => setStoryForm({ ...storyForm, body: e.target.value })}
+                placeholder="tell it"
+              />
+            </label>
+            <div className="studio-form-actions">
+              <button type="submit">{editingId ? 'save changes' : 'add story'}</button>
+              {editingId && <button type="button" className="studio-ghost" onClick={resetForms}>cancel</button>}
+            </div>
+          </form>
+          <StudioList items={stories} collection="stories" label={(item) => item.title} onEdit={editStory} onRemove={remove} />
+        </section>
+      )}
+
       {tab === 'quotes' && (
         <section className="studio-panel">
           <form className="studio-form" onSubmit={saveQuote}>
@@ -563,7 +615,11 @@ function Studio() {
             <h2>{editingId ? 'Edit thought' : 'New thought'}</h2>
             <label>
               A question you cannot leave alone
-              <textarea rows={3} value={questionForm.text} onChange={(e) => setQuestionForm({ text: e.target.value })} />
+              <textarea rows={3} value={questionForm.text} onChange={(e) => setQuestionForm({ ...questionForm, text: e.target.value })} />
+            </label>
+            <label>
+              The thought around it
+              <textarea rows={3} value={questionForm.note} onChange={(e) => setQuestionForm({ ...questionForm, note: e.target.value })} />
             </label>
             <div className="studio-form-actions">
               <button type="submit">{editingId ? 'save changes' : 'add thought'}</button>

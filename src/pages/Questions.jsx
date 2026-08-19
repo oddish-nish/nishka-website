@@ -40,6 +40,7 @@ function Questions() {
           <button type="button" className="question-pull" onClick={pull}>
             <span className="question-pull-cord" />
             <span className="question-text">{current?.text}</span>
+            {current?.note && <span className="question-gloss">{current.note}</span>}
             <span className="question-hint">pull for another</span>
           </button>
           {showAll && (

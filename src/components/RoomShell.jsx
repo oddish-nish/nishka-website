@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useMaze } from '../context/MazeContext'
 import { useViewMode } from '../context/ViewModeContext'
 import { ROOMS, WINGS } from '../data/rooms'
 import { Passage } from './HouseHallway'
+import { openEasterEgg } from './EasterEggModal'
 
 function RoomShell({ roomId, children, className = '' }) {
   const { markSeen, getExits } = useMaze()
@@ -11,6 +12,7 @@ function RoomShell({ roomId, children, className = '' }) {
   const room = ROOMS[roomId]
   const wing = WINGS[room.wing]
   const exits = getExits(roomId)
+  const [keepGoingTaps, setKeepGoingTaps] = useState(0)
 
   useEffect(() => {
     markSeen(roomId)
@@ -37,7 +39,21 @@ function RoomShell({ roomId, children, className = '' }) {
       {!isHiring && (
         <section className="keep-walking">
           <div className="container">
-            <p className="keep-walking-label">Keep going.</p>
+            <p className="keep-walking-label">
+              <button
+                type="button"
+                className="quiet-egg"
+                onClick={() => {
+                  const next = keepGoingTaps + 1
+                  setKeepGoingTaps(next)
+                  if (next === 3) {
+                    openEasterEgg('The house is not trying to trap you. It is trying to see what you notice.')
+                  }
+                }}
+              >
+                Keep going.
+              </button>
+            </p>
             <nav className="keep-walking-doors" aria-label="Keep going">
               {exits.map((place) => (
                 <Passage key={place.id} place={place} />

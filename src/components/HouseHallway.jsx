@@ -35,13 +35,23 @@ export function HouseHallway({ wingId, doors, kicker, lead }) {
   return (
     <section className={`house-hallway hallway-${wingId}`}>
       <div className={`container hallway-inner ${kicker ? '' : 'no-kicker'}`}>
-        {kicker && <p className="hallway-kicker">{kicker}</p>}
+        {kicker && wing.kickerEgg ? (
+          <button
+            type="button"
+            className="hallway-kicker hallway-kicker-egg"
+            onClick={() => openEasterEgg(wing.kickerEgg, wing.id)}
+          >
+            {kicker}
+          </button>
+        ) : kicker ? (
+          <p className="hallway-kicker">{kicker}</p>
+        ) : null}
         <h1 className="hallway-title">
           {wing.egg ? (
             <button
               type="button"
               className="hallway-title-egg"
-              onClick={() => openEasterEgg(wing.egg, 'brain')}
+              onClick={() => openEasterEgg(wing.egg, wing.id)}
             >
               {wing.title}
             </button>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { openEasterEgg } from '../components/EasterEggModal'
 
 function WhyThisSite() {
   return (
@@ -6,11 +7,27 @@ function WhyThisSite() {
       <section className="section why-site-section">
         <div className="container">
           <div className="why-site-content">
-            <p className="why-site-kicker">other</p>
+            <p className="why-site-kicker">
+              <button
+                type="button"
+                className="quiet-egg"
+                onClick={() => openEasterEgg('The leftover drawer. On purpose.')}
+              >
+                other
+              </button>
+            </p>
             <p className="why-site-opening">
               This site wasn't designed to impress.<br />It was designed to reflect how I think.
             </p>
-            <p className="why-site-note">Glad you explored a little deeper.</p>
+            <p className="why-site-note">
+              <button
+                type="button"
+                className="quiet-egg"
+                onClick={() => openEasterEgg('You already were. That’s why you’re still here.')}
+              >
+                Glad you explored a little deeper.
+              </button>
+            </p>
 
             <div className="why-site-section-block">
               <h2 className="why-site-heading">Why This Layout</h2>
@@ -55,7 +72,15 @@ function WhyThisSite() {
                 Neither am I.
               </p>
               <p className="why-site-closing-text" style={{ marginTop: '1.5rem', fontStyle: 'italic' }}>
-                Thanks for looking a little closer. Stay curious. &lt;3
+                Thanks for looking a little closer.{' '}
+                <button
+                  type="button"
+                  className="quiet-egg"
+                  onClick={() => openEasterEgg('You already are. That’s why you’re still here.')}
+                >
+                  Stay curious.
+                </button>{' '}
+                &lt;3
               </p>
             </div>
             <Link to="/studio" className="why-site-studio">studio</Link>

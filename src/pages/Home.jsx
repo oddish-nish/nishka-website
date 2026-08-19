@@ -4,6 +4,7 @@ import { GlassDoor } from '../components/HouseHallway'
 import { WINGS } from '../data/rooms'
 import { useLiving } from '../lib/living'
 import { useViewMode } from '../context/ViewModeContext'
+import { openEasterEgg } from '../components/EasterEggModal'
 
 const fonts = [
   'Fraunces',
@@ -64,6 +65,10 @@ function Home() {
   const { setViewMode } = useViewMode()
 
   useEffect(() => {
+    setViewMode('exploring')
+  }, [setViewMode])
+
+  useEffect(() => {
     const nameElement = nameRef.current
     if (!nameElement) return
     let last = nameElement.style.fontFamily
@@ -97,9 +102,20 @@ function Home() {
         <h1 className="hero-title" id="nishka-name">
           Hi, I&apos;m <span className="name-hover" ref={nameRef}>Nishka</span>.
         </h1>
-        <p className="hero-subtitle">Ask questions endlessly. Find the answers shamelessly.</p>
+        <p className="hero-subtitle">
+          <button
+            type="button"
+            className="quiet-egg hero-subtitle-egg"
+            onClick={() => openEasterEgg('I printed that on the front door on purpose.')}
+          >
+            Ask questions endlessly. Find the answers shamelessly.
+          </button>
+        </p>
+        {new Date().getHours() < 5 && (
+          <p className="hero-late">It’s late. I like this hour.</p>
+        )}
         <p className="hero-hire">
-          <Link to="/work?hire=1" onClick={() => setViewMode('hiring')}>
+          <Link to="/work?hire=1">
             For roles, research, and projects, start here.
           </Link>
         </p>

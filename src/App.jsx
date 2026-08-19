@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Navigate, Routes, Route, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import EasterEggModal from './components/EasterEggModal'
@@ -90,6 +91,7 @@ function Shell() {
       </Routes>
       {!desk && <Footer />}
       {!desk && <EasterEggModal />}
+      <Analytics route={pathname} path={pathname} />
     </div>
   )
 }

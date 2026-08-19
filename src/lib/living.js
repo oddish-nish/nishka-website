@@ -8,6 +8,7 @@ import { questions as seedQuestions } from '../data/questions'
 import { philosophies as seedPhilosophies } from '../data/philosophies'
 import { learning as seedLearning } from '../data/learning'
 import { facts as seedFacts } from '../data/facts'
+import { stories as seedStories } from '../data/stories'
 
 export const SEEDS = {
   poems: seedPoems,
@@ -19,6 +20,7 @@ export const SEEDS = {
   philosophies: seedPhilosophies,
   learning: seedLearning,
   facts: seedFacts,
+  stories: seedStories,
 }
 
 export const QUOTE_FLAVORS = ['curiosity', 'growth', 'identity', 'courage', 'purpose', 'love', 'wisdom']

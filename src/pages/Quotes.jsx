@@ -32,7 +32,7 @@ function Quotes() {
                   type="button"
                   className={`fizz-bubble flavor-${quote.flavor} ${popped === quote.id ? 'is-popped' : ''}`}
                   style={
-                    showAll
+                    showAll || popped === quote.id
                       ? { animationDelay: `${(i % 8) * 0.18}s` }
                       : {
                           top: spot.top,
