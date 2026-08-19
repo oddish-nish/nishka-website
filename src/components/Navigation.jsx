@@ -25,10 +25,10 @@ function Navigation() {
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>nishka</Link>
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <Link to="/curiosity" className={`nav-link ${isActive('/curiosity') ? 'active' : ''}`} onClick={closeMenu}>brain</Link>
-          <Link to="/projects" className={`nav-link ${isActive('/projects') ? 'active' : ''}`} onClick={closeMenu}>work</Link>
-          <Link to="/creative" className={`nav-link ${isActive('/creative') ? 'active' : ''}`} onClick={closeMenu}>heart</Link>
-          <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`} onClick={closeMenu}>soul</Link>
+          <Link to="/brain" className={`nav-link ${isActive('/brain') ? 'active' : ''}`} onClick={closeMenu}>brain</Link>
+          <Link to="/work" className={`nav-link ${isActive('/work') ? 'active' : ''}`} onClick={closeMenu}>work</Link>
+          <Link to="/heart" className={`nav-link ${isActive('/heart') ? 'active' : ''}`} onClick={closeMenu}>heart</Link>
+          <Link to="/soul" className={`nav-link ${isActive('/soul') ? 'active' : ''}`} onClick={closeMenu}>soul</Link>
           <Link to="/odds" className={`nav-link ${isActive('/odds') ? 'active' : ''}`} onClick={closeMenu}>odds</Link>
           <Link to="/other" className={`nav-link ${isActive('/other') ? 'active' : ''}`} onClick={closeMenu}>other</Link>
         </div>

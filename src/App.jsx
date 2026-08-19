@@ -29,6 +29,11 @@ import Boundaries from './pages/Boundaries'
 import Studio from './pages/Studio'
 import ScrollToTop from './components/ScrollToTop'
 
+function RedirectKeepSearch({ to }) {
+  const { search } = useLocation()
+  return <Navigate to={`${to}${search}`} replace />
+}
+
 function Shell() {
   const { pathname } = useLocation()
   const desk = pathname === '/studio'
@@ -39,30 +44,48 @@ function Shell() {
       {!desk && <Navigation />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/about/beliefs" element={<Beliefs />} />
-        <Route path="/about/boundaries" element={<Boundaries />} />
-        <Route path="/curiosity" element={<Curiosity />} />
-        <Route path="/curiosity/questions" element={<Questions />} />
-        <Route path="/curiosity/philosophy" element={<Philosophy />} />
-        <Route path="/curiosity/books" element={<Books />} />
-        <Route path="/curiosity/learning" element={<Learning />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/experience" element={<Experience />} />
-        <Route path="/projects/research" element={<Research />} />
-        <Route path="/projects/playground" element={<Playground />} />
-        <Route path="/creative" element={<Creative />} />
-        <Route path="/creative/quotes" element={<Quotes />} />
-        <Route path="/creative/poems" element={<Poems />} />
-        <Route path="/creative/greenhouse" element={<Greenhouse />} />
-        <Route path="/creative/performance" element={<Performance />} />
-        <Route path="/creative/moments" element={<Moments />} />
+        <Route path="/brain" element={<Curiosity />} />
+        <Route path="/brain/questions" element={<Questions />} />
+        <Route path="/brain/philosophy" element={<Philosophy />} />
+        <Route path="/brain/books" element={<Books />} />
+        <Route path="/brain/learning" element={<Learning />} />
+        <Route path="/work" element={<Projects />} />
+        <Route path="/work/experience" element={<Experience />} />
+        <Route path="/work/research" element={<Research />} />
+        <Route path="/work/playground" element={<Playground />} />
+        <Route path="/heart" element={<Creative />} />
+        <Route path="/heart/quotes" element={<Quotes />} />
+        <Route path="/heart/poems" element={<Poems />} />
+        <Route path="/heart/greenhouse" element={<Greenhouse />} />
+        <Route path="/heart/performance" element={<Performance />} />
+        <Route path="/heart/moments" element={<Moments />} />
+        <Route path="/soul" element={<About />} />
+        <Route path="/soul/beliefs" element={<Beliefs />} />
+        <Route path="/soul/boundaries" element={<Boundaries />} />
         <Route path="/studio" element={<Studio />} />
         <Route path="/other" element={<WhyThisSite />} />
         <Route path="/odds" element={<Odds />} />
-        <Route path="/quotes" element={<Navigate to="/creative/quotes" replace />} />
-        <Route path="/poems" element={<Navigate to="/creative/poems" replace />} />
-        <Route path="/why-this-site" element={<Navigate to="/other" replace />} />
+        <Route path="/quotes" element={<RedirectKeepSearch to="/heart/quotes" />} />
+        <Route path="/poems" element={<RedirectKeepSearch to="/heart/poems" />} />
+        <Route path="/why-this-site" element={<RedirectKeepSearch to="/other" />} />
+        <Route path="/curiosity" element={<RedirectKeepSearch to="/brain" />} />
+        <Route path="/curiosity/questions" element={<RedirectKeepSearch to="/brain/questions" />} />
+        <Route path="/curiosity/philosophy" element={<RedirectKeepSearch to="/brain/philosophy" />} />
+        <Route path="/curiosity/books" element={<RedirectKeepSearch to="/brain/books" />} />
+        <Route path="/curiosity/learning" element={<RedirectKeepSearch to="/brain/learning" />} />
+        <Route path="/projects" element={<RedirectKeepSearch to="/work" />} />
+        <Route path="/projects/experience" element={<RedirectKeepSearch to="/work/experience" />} />
+        <Route path="/projects/research" element={<RedirectKeepSearch to="/work/research" />} />
+        <Route path="/projects/playground" element={<RedirectKeepSearch to="/work/playground" />} />
+        <Route path="/creative" element={<RedirectKeepSearch to="/heart" />} />
+        <Route path="/creative/quotes" element={<RedirectKeepSearch to="/heart/quotes" />} />
+        <Route path="/creative/poems" element={<RedirectKeepSearch to="/heart/poems" />} />
+        <Route path="/creative/greenhouse" element={<RedirectKeepSearch to="/heart/greenhouse" />} />
+        <Route path="/creative/performance" element={<RedirectKeepSearch to="/heart/performance" />} />
+        <Route path="/creative/moments" element={<RedirectKeepSearch to="/heart/moments" />} />
+        <Route path="/about" element={<RedirectKeepSearch to="/soul" />} />
+        <Route path="/about/beliefs" element={<RedirectKeepSearch to="/soul/beliefs" />} />
+        <Route path="/about/boundaries" element={<RedirectKeepSearch to="/soul/boundaries" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {!desk && <Footer />}

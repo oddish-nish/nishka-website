@@ -56,3 +56,11 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/nish-awa/',
   github: 'https://github.com/oddish-nish',
 }
+
+export const hireIntro = {
+  summary:
+    'Purdue CS & Business Analytics. I build production software for messy real systems — public benefits, scientific data, infrastructure that has to stay up.',
+  focus: 'Civic and public-sector product, research automation, and TypeScript in production.',
+  availability: 'open to full-time software engineering roles',
+  updated: 'August 2026',
+}

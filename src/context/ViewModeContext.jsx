@@ -5,6 +5,7 @@ const ViewModeContext = createContext(null)
 
 function readMode() {
   try {
+    if (new URLSearchParams(window.location.search).has('hire')) return 'hiring'
     return sessionStorage.getItem(STORAGE_KEY) || 'exploring'
   } catch {
     return 'exploring'

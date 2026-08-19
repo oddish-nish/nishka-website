@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { GlassDoor } from '../components/HouseHallway'
 import { WINGS } from '../data/rooms'
 import { useLiving } from '../lib/living'
+import { useViewMode } from '../context/ViewModeContext'
 
 const fonts = [
   'Fraunces',
@@ -59,6 +61,7 @@ const HERO_PLACES = [
 function Home() {
   const nameRef = useRef(null)
   const photos = useLiving('photos').filter((photo) => photo.onHome !== false)
+  const { setViewMode } = useViewMode()
 
   useEffect(() => {
     const nameElement = nameRef.current
@@ -95,6 +98,11 @@ function Home() {
           Hi, I&apos;m <span className="name-hover" ref={nameRef}>Nishka</span>.
         </h1>
         <p className="hero-subtitle">Ask questions endlessly. Find the answers shamelessly.</p>
+        <p className="hero-hire">
+          <Link to="/work?hire=1" onClick={() => setViewMode('hiring')}>
+            For roles, research, and projects, start here.
+          </Link>
+        </p>
 
         <div className="glass-door-row atrium-doors">
           {doors.map((place) => (

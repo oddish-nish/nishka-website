@@ -184,23 +184,23 @@ body > *:not(.photo-grid-bg) {
     background: var(--text-primary);
 }
 
-.nav-link[href*="curiosity"]:hover::after,
-.nav-link[href*="curiosity"].active::after {
+.nav-link[href*="brain"]:hover::after,
+.nav-link[href*="brain"].active::after {
     background: var(--brain-color);
 }
 
-.nav-link[href*="projects"]:hover::after,
-.nav-link[href*="projects"].active::after {
+.nav-link[href*="work"]:hover::after,
+.nav-link[href*="work"].active::after {
     background: var(--work-color);
 }
 
-.nav-link[href*="creative"]:hover::after,
-.nav-link[href*="creative"].active::after {
+.nav-link[href*="heart"]:hover::after,
+.nav-link[href*="heart"].active::after {
     background: var(--heart-color);
 }
 
-.nav-link[href*="about"]:hover::after,
-.nav-link[href*="about"].active::after {
+.nav-link[href*="soul"]:hover::after,
+.nav-link[href*="soul"].active::after {
     background: var(--soul-color);
 }
 
@@ -285,7 +285,6 @@ body > *:not(.photo-grid-bg) {
     color: var(--text-secondary);
     font-weight: 400;
     margin: 0;
-    opacity: 0.8;
 }
 
 .view-toggle {
@@ -294,7 +293,7 @@ body > *:not(.photo-grid-bg) {
     background: rgba(255, 255, 255, 0.6);
     padding: 0.25rem;
     border-radius: 8px;
-    border: 1px solid rgba(200, 139, 122, 0.3);
+    border: 1px solid rgba(200, 139, 122, 0.45);
 }
 
 .view-toggle-option {
@@ -311,11 +310,14 @@ body > *:not(.photo-grid-bg) {
 }
 
 .view-toggle-text {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 0.5rem 1.25rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     border-radius: 6px;
     transition: all 0.3s ease;
     font-family: var(--font-sans);
@@ -854,12 +856,37 @@ body.explore-mode .research-question {
     font-style: italic;
     font-size: clamp(1.15rem, 2.6vw, 1.45rem);
     font-weight: 400;
-    margin-bottom: 2rem;
-    opacity: 0.7;
+    margin-bottom: 0.85rem;
+    opacity: 0.78;
     animation: fadeInUp 0.8s ease 0.2s both;
     letter-spacing: 0;
     line-height: 1.45;
     max-width: 700px;
+    color: var(--text-primary);
+}
+
+.hero-hire {
+    margin: 0 0 1.85rem;
+    animation: fadeInUp 0.8s ease 0.28s both;
+}
+
+.hero-hire a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.5);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.hero-hire a:hover,
+.hero-hire a:focus-visible {
+    border-bottom-color: var(--work-color);
+    color: var(--work-color);
 }
 
 /* Questions Section */
@@ -3361,6 +3388,22 @@ body::before {
     
     .nav-toggle {
         display: flex;
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        color: var(--text-primary);
+    }
+
+    .glass-door {
+        background: rgba(255, 255, 255, 0.62);
+        min-height: 160px;
     }
     
     .nav-toggle.active span:nth-child(1) {
@@ -5005,7 +5048,7 @@ body.hire-mode .hero::after {
 .resume-header {
     text-align: center;
     margin-bottom: 2.25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.35rem;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -5017,9 +5060,48 @@ body.hire-mode .hero::after {
     margin-bottom: 0.45rem;
 }
 
+.resume-now {
+    font-size: 0.92rem;
+    color: #3a3a3a;
+    margin-bottom: 0.9rem;
+}
+
+.resume-summary,
+.resume-focus {
+    max-width: 38rem;
+    margin: 0 auto 0.75rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: #1a1a1a;
+    text-align: left;
+}
+
+.resume-focus span {
+    font-weight: 600;
+}
+
+.resume-contact-one {
+    margin-top: 1rem;
+}
+
+.resume-contact-one a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: #1a1a1a;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.45);
+}
+
+.resume-contact-one a:hover,
+.resume-contact-one a:focus-visible {
+    border-bottom-color: var(--work-color);
+}
+
 .resume-contact {
     font-size: 0.88rem;
-    color: #4a4a4a;
+    color: #3a3a3a;
     line-height: 1.6;
 }
 

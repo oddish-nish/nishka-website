@@ -1,5 +1,5 @@
 import ViewToggle from '../components/ViewToggle'
-import { contact, education, leadership, skills } from '../data/resume'
+import { contact, education, hireIntro, leadership, skills } from '../data/resume'
 import { experience } from '../data/experience'
 import { playground } from '../data/playground'
 import { research } from '../data/research'
@@ -14,18 +14,15 @@ function Resume() {
       <article className="resume">
         <header className="resume-header">
           <h1>Nishka Awasthi</h1>
-          <p className="resume-contact">
+          <p className="resume-now">
+            Currently {hireIntro.availability}. Updated {hireIntro.updated}.
+          </p>
+          <p className="resume-summary">{hireIntro.summary}</p>
+          <p className="resume-focus">
+            <span>Focus.</span> {hireIntro.focus}
+          </p>
+          <p className="resume-contact-one">
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            <span> · </span>
-            <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/nish-awa
-            </a>
-            <span> · </span>
-            <a href={contact.github} target="_blank" rel="noopener noreferrer">
-              github.com/oddish-nish
-            </a>
-            <span> · </span>
-            {contact.phone}
           </p>
         </header>
 

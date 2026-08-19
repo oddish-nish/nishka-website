@@ -1,7 +1,7 @@
 export const ROOMS = {
   questions: {
     id: 'questions',
-    path: '/curiosity/questions',
+    path: '/brain/questions',
     wing: 'brain',
     title: "Things I can't leave alone",
     whisper: 'questions that have been bothering me lately.',
@@ -9,7 +9,7 @@ export const ROOMS = {
   },
   philosophy: {
     id: 'philosophy',
-    path: '/curiosity/philosophy',
+    path: '/brain/philosophy',
     wing: 'brain',
     title: 'Working theories',
     whisper: 'subject to change without notice.',
@@ -17,7 +17,7 @@ export const ROOMS = {
   },
   books: {
     id: 'books',
-    path: '/curiosity/books',
+    path: '/brain/books',
     wing: 'brain',
     title: 'The shelf',
     whisper: 'books that left something behind.',
@@ -25,7 +25,7 @@ export const ROOMS = {
   },
   learning: {
     id: 'learning',
-    path: '/curiosity/learning',
+    path: '/brain/learning',
     wing: 'brain',
     title: 'Rabbit holes',
     whisper: "things I'm currently disappearing into.",
@@ -33,7 +33,7 @@ export const ROOMS = {
   },
   experience: {
     id: 'experience',
-    path: '/projects/experience',
+    path: '/work/experience',
     wing: 'work',
     title: 'Where I have worked',
     whisper: 'A timeline of roles, not a résumé dump',
@@ -41,7 +41,7 @@ export const ROOMS = {
   },
   research: {
     id: 'research',
-    path: '/projects/research',
+    path: '/work/research',
     wing: 'work',
     title: 'Labs I have loved',
     whisper: 'Academic curiosity, applied',
@@ -49,7 +49,7 @@ export const ROOMS = {
   },
   playground: {
     id: 'playground',
-    path: '/projects/playground',
+    path: '/work/playground',
     wing: 'work',
     title: 'Things I built for the fun of it',
     whisper: 'Pick a cabinet. Insert a coin.',
@@ -57,7 +57,7 @@ export const ROOMS = {
   },
   greenhouse: {
     id: 'greenhouse',
-    path: '/creative/greenhouse',
+    path: '/heart/greenhouse',
     wing: 'heart',
     title: 'The greenhouse',
     whisper: 'yes, I really do need more plants.',
@@ -65,7 +65,7 @@ export const ROOMS = {
   },
   quotes: {
     id: 'quotes',
-    path: '/creative/quotes',
+    path: '/heart/quotes',
     wing: 'heart',
     title: 'Quotes that taste fizzy',
     whisper: 'words so good I had to keep them.',
@@ -73,7 +73,7 @@ export const ROOMS = {
   },
   poems: {
     id: 'poems',
-    path: '/creative/poems',
+    path: '/heart/poems',
     wing: 'heart',
     title: 'Poems I wrote',
     whisper: 'some feelings are unfortunately poems.',
@@ -81,7 +81,7 @@ export const ROOMS = {
   },
   performance: {
     id: 'performance',
-    path: '/creative/performance',
+    path: '/heart/performance',
     wing: 'heart',
     title: 'The stage',
     whisper: 'I miss the microphone sometimes.',
@@ -89,7 +89,7 @@ export const ROOMS = {
   },
   moments: {
     id: 'moments',
-    path: '/creative/moments',
+    path: '/heart/moments',
     wing: 'heart',
     title: 'Life in frames',
     whisper: "things I didn't want to forget.",
@@ -97,7 +97,7 @@ export const ROOMS = {
   },
   beliefs: {
     id: 'beliefs',
-    path: '/about/beliefs',
+    path: '/soul/beliefs',
     wing: 'soul',
     title: 'What I believe',
     whisper: 'Even when it is inconvenient',
@@ -105,7 +105,7 @@ export const ROOMS = {
   },
   boundaries: {
     id: 'boundaries',
-    path: '/about/boundaries',
+    path: '/soul/boundaries',
     wing: 'soul',
     title: 'What I am protecting',
     whisper: 'Letting go, on purpose',
@@ -116,7 +116,7 @@ export const ROOMS = {
 export const WINGS = {
   brain: {
     id: 'brain',
-    path: '/curiosity',
+    path: '/brain',
     title: 'Brain',
     subtitle: 'Where I keep all my unfinished questions.',
     egg: 'questioning → forming opinions → absorbing → learning',
@@ -125,7 +125,7 @@ export const WINGS = {
   },
   work: {
     id: 'work',
-    path: '/projects',
+    path: '/work',
     title: 'Work',
     subtitle: 'Where curiosity becomes something you can hold.',
     rooms: ['research', 'playground', 'experience'],
@@ -133,7 +133,7 @@ export const WINGS = {
   },
   heart: {
     id: 'heart',
-    path: '/creative',
+    path: '/heart',
     title: 'Heart',
     subtitle: 'Where I keep the things I love too much.',
     rooms: ['poems', 'quotes', 'greenhouse', 'moments', 'performance'],
@@ -141,7 +141,7 @@ export const WINGS = {
   },
   soul: {
     id: 'soul',
-    path: '/about',
+    path: '/soul',
     title: 'Soul',
     subtitle: 'What remains when no one is watching.',
     rooms: ['beliefs', 'boundaries'],
