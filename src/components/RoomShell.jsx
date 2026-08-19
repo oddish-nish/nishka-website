@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useMaze } from '../context/MazeContext'
 import { useViewMode } from '../context/ViewModeContext'
 import { ROOMS, WINGS } from '../data/rooms'
-import { GlassDoor } from './HouseHallway'
+import { Passage } from './HouseHallway'
 
 function RoomShell({ roomId, children, className = '' }) {
   const { markSeen, getExits } = useMaze()
@@ -38,11 +38,11 @@ function RoomShell({ roomId, children, className = '' }) {
         <section className="keep-walking">
           <div className="container">
             <p className="keep-walking-label">Keep going.</p>
-            <div className="glass-door-row glass-door-row-compact">
+            <nav className="keep-walking-doors" aria-label="Keep going">
               {exits.map((place) => (
-                <GlassDoor key={place.id} place={place} />
+                <Passage key={place.id} place={place} />
               ))}
-            </div>
+            </nav>
           </div>
         </section>
       )}

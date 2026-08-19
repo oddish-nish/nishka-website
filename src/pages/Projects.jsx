@@ -14,14 +14,12 @@ function Projects() {
   }
 
   return (
-    <>
-      <HouseHallway
-        wingId="work"
-        doors={doors}
-        kicker="A workshop behind glass."
-      />
-      <ViewToggle />
-    </>
+    <HouseHallway
+      wingId="work"
+      doors={doors}
+      kicker="A workshop behind glass."
+      lead={<ViewToggle />}
+    />
   )
 }
 

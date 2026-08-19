@@ -17,12 +17,25 @@ function GlassDoor({ place, className = '', label }) {
   )
 }
 
-export function HouseHallway({ wingId, doors, kicker }) {
+function Passage({ place }) {
+  const wingId = place.rooms ? place.id : place.wing
+  const isHall = Boolean(place.rooms)
+
+  return (
+    <Link to={place.path} className={`passage passage-${wingId}`}>
+      <span className="passage-name">{isHall ? place.title.toLowerCase() : place.title}</span>
+      <span className="passage-whisper">{place.whisper || place.subtitle}</span>
+    </Link>
+  )
+}
+
+export function HouseHallway({ wingId, doors, kicker, lead }) {
   const wing = WINGS[wingId]
 
   return (
     <section className={`house-hallway hallway-${wingId}`}>
       <div className={`container hallway-inner ${kicker ? '' : 'no-kicker'}`}>
+        {lead}
         {kicker && <p className="hallway-kicker">{kicker}</p>}
         <h1 className="hallway-title">
           {wing.egg ? (
@@ -38,14 +51,14 @@ export function HouseHallway({ wingId, doors, kicker }) {
           )}
         </h1>
         <p className="hallway-subtitle">{wing.subtitle}</p>
-        <div className="glass-door-row">
+        <nav className="hallway-doors" aria-label={`${wing.title} rooms`}>
           {doors.map((place) => (
-            <GlassDoor key={place.id} place={place} />
+            <Passage key={place.id} place={place} />
           ))}
-        </div>
+        </nav>
       </div>
     </section>
   )
 }
 
-export { GlassDoor }
+export { GlassDoor, Passage }

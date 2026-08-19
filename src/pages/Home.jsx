@@ -5,11 +5,42 @@ import { useLiving } from '../lib/living'
 
 const fonts = [
   'Fraunces',
-  'Georgia',
-  'Palatino, Palatino Linotype, serif',
-  'Times New Roman',
-  'Courier New',
   'Outfit',
+  'Georgia',
+  'Palatino, Palatino Linotype, Palatino, serif',
+  'Times New Roman, Times, serif',
+  'Courier New, Courier, monospace',
+  'Didot, Bodoni MT, serif',
+  'Baskerville, Baskerville Old Face, serif',
+  'Hoefler Text, serif',
+  'Garamond, EB Garamond, serif',
+  'Futura, Trebuchet MS, sans-serif',
+  'Optima, Candara, sans-serif',
+  'Gill Sans, Gill Sans MT, sans-serif',
+  'American Typewriter, Courier New, monospace',
+  'Snell Roundhand, Apple Chancery, cursive',
+  'Brush Script MT, cursive',
+  'Impact, Haettenschweiler, sans-serif',
+  'Copperplate, Copperplate Gothic Light, serif',
+  'Marker Felt, Comic Sans MS, cursive',
+  'Playfair Display, serif',
+  'Cormorant Garamond, serif',
+  'Instrument Serif, serif',
+  'DM Serif Display, serif',
+  'Bodoni Moda, serif',
+  'Italiana, serif',
+  'Gloock, serif',
+  'Yeseva One, serif',
+  'Cinzel, serif',
+  'Caveat, cursive',
+  'Great Vibes, cursive',
+  'Homemade Apple, cursive',
+  'Dancing Script, cursive',
+  'Special Elite, cursive',
+  'Space Mono, monospace',
+  'Syne, sans-serif',
+  'Unbounded, sans-serif',
+  'Fredoka, sans-serif',
 ]
 
 const doors = [WINGS.brain, WINGS.work, WINGS.heart, WINGS.soul]
@@ -32,8 +63,14 @@ function Home() {
   useEffect(() => {
     const nameElement = nameRef.current
     if (!nameElement) return
+    let last = nameElement.style.fontFamily
     const handleMouseOver = () => {
-      nameElement.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)]
+      let next = fonts[Math.floor(Math.random() * fonts.length)]
+      while (next === last && fonts.length > 1) {
+        next = fonts[Math.floor(Math.random() * fonts.length)]
+      }
+      last = next
+      nameElement.style.fontFamily = next
     }
     nameElement.addEventListener('mouseover', handleMouseOver)
     return () => nameElement.removeEventListener('mouseover', handleMouseOver)

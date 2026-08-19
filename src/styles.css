@@ -3606,8 +3606,7 @@ html {
 }
 
 @media (max-width: 640px) {
-    .atrium-doors,
-    .hallway-brain .glass-door-row {
+    .atrium-doors {
         grid-template-columns: 1fr;
     }
 }
@@ -3708,11 +3707,17 @@ html {
     margin-top: 1.25rem;
 }
 
+.hallway-work .view-toggle-section {
+    background: transparent;
+    border: none;
+    padding: 0 0 1.5rem;
+}
+
 .hallway-heart .hallway-subtitle {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.25rem;
-    margin: 0 auto 3.25rem;
+    margin: 0 auto 0.5rem;
     max-width: 28rem;
     line-height: 1.45;
 }
@@ -3731,20 +3736,104 @@ html {
     color: var(--brain-color);
 }
 
-.hallway-brain .hallway-subtitle {
+.hallway-brain .hallway-subtitle,
+.hallway-work .hallway-subtitle,
+.hallway-soul .hallway-subtitle {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.25rem;
-    margin: 0 auto 3.25rem;
+    margin: 0 auto 0.5rem;
     max-width: 32rem;
     line-height: 1.45;
 }
 
-.hallway-brain .glass-door-row {
-    grid-template-columns: 1fr 1fr;
-    max-width: 720px;
+.hallway-doors {
+    display: flex;
+    flex-direction: column;
+    gap: 2.35rem;
+    max-width: 40rem;
+    margin: 3.25rem auto 0;
+    padding: 0;
+}
+
+.passage {
+    display: block;
+    width: fit-content;
+    max-width: min(100%, 34rem);
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+}
+
+.hallway-doors .passage:nth-child(even) {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.passage-name {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.passage:focus-visible {
+    outline: none;
+}
+
+.passage-whisper {
+    display: block;
+    margin-top: 0.4rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+}
+
+.hallway-doors .passage:nth-child(even) .passage-whisper {
     margin-left: auto;
-    margin-right: auto;
+}
+
+.passage:hover .passage-name,
+.passage:focus-visible .passage-name {
+    background-size: 100% 1px;
+}
+
+.passage-brain:hover .passage-name,
+.passage-brain:focus-visible .passage-name { color: var(--brain-color); }
+.passage-work:hover .passage-name,
+.passage-work:focus-visible .passage-name { color: var(--work-color); }
+.passage-heart:hover .passage-name,
+.passage-heart:focus-visible .passage-name { color: var(--heart-color); }
+.passage-soul:hover .passage-name,
+.passage-soul:focus-visible .passage-name { color: var(--soul-color); }
+
+@media (max-width: 640px) {
+    .hallway-doors {
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .hallway-doors .passage:nth-child(even) {
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .hallway-doors .passage:nth-child(even) .passage-whisper {
+        margin-left: 0;
+    }
 }
 
 .hallway-brain { background: var(--bg-brain); }
@@ -3777,11 +3866,29 @@ html {
 }
 
 .keep-walking-label {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
 }
 
-.glass-door-row-compact .glass-door {
-    min-height: 150px;
+.keep-walking-doors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.75rem 2.75rem;
+    max-width: 44rem;
+    margin: 0 auto;
+}
+
+.keep-walking-doors .passage {
+    text-align: center;
+    max-width: 16rem;
+}
+
+.keep-walking-doors .passage-name {
+    font-size: 1.35rem;
+}
+
+.keep-walking-doors .passage-whisper {
+    font-size: 0.92rem;
 }
 
 .show-all-btn {
