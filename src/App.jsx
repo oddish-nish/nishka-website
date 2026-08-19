@@ -12,6 +12,7 @@ import Creative from './pages/Creative'
 import Quotes from './pages/Quotes'
 import Poems from './pages/Poems'
 import WhyThisSite from './pages/WhyThisSite'
+import Odds from './pages/Odds'
 import NotFound from './pages/NotFound'
 import Questions from './pages/Questions'
 import Philosophy from './pages/Philosophy'
@@ -58,6 +59,7 @@ function Shell() {
         <Route path="/creative/moments" element={<Moments />} />
         <Route path="/studio" element={<Studio />} />
         <Route path="/other" element={<WhyThisSite />} />
+        <Route path="/odds" element={<Odds />} />
         <Route path="/quotes" element={<Navigate to="/creative/quotes" replace />} />
         <Route path="/poems" element={<Navigate to="/creative/poems" replace />} />
         <Route path="/why-this-site" element={<Navigate to="/other" replace />} />

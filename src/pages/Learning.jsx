@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import RoomShell from '../components/RoomShell'
 import { ShowAllButton, useCollection } from '../components/ShowAllButton'
-import { learning } from '../data/learning'
+import { useLiving } from '../lib/living'
 
 const positions = [
   { x: 18, y: 28 },
@@ -13,6 +13,7 @@ const positions = [
 ]
 
 function Learning() {
+  const learning = useLiving('learning')
   const { visible, showAll, toggle } = useCollection('learning', learning, 4)
   const [openId, setOpenId] = useState(null)
   const open = visible.find((s) => s.id === openId)

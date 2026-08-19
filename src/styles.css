@@ -144,6 +144,12 @@ body > *:not(.photo-grid-bg) {
     align-items: center;
 }
 
+@media (max-width: 960px) {
+    .nav-links {
+        gap: 1.1rem;
+    }
+}
+
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
@@ -196,6 +202,11 @@ body > *:not(.photo-grid-bg) {
 .nav-link[href*="about"]:hover::after,
 .nav-link[href*="about"].active::after {
     background: var(--soul-color);
+}
+
+.nav-link[href*="odds"]:hover::after,
+.nav-link[href*="odds"].active::after {
+    background: var(--accent-ochre);
 }
 
 .nav-toggle {
@@ -3710,7 +3721,7 @@ html {
 .hallway-work .view-toggle-section {
     background: transparent;
     border: none;
-    padding: 0 0 1.5rem;
+    padding: 0.35rem 0 0;
 }
 
 .hallway-heart .hallway-subtitle {
@@ -3840,6 +3851,65 @@ html {
 .hallway-work { background: var(--bg-work); }
 .hallway-heart { background: var(--bg-heart); }
 .hallway-soul { background: var(--bg-soul); }
+.hallway-odds { background: linear-gradient(135deg, rgba(212, 168, 122, 0.18) 0%, rgba(154, 139, 170, 0.12) 100%); }
+
+.odds-subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.25rem;
+    margin: 0 auto 0.5rem;
+    max-width: 28rem;
+    line-height: 1.45;
+}
+
+.odds-draw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 38rem;
+    margin: 3.25rem auto 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    text-align: center;
+}
+
+.odds-draw:focus-visible {
+    outline: none;
+}
+
+.odds-fact {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(1.55rem, 3.4vw, 2.35rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.35;
+    text-wrap: pretty;
+    animation: odds-in 0.45s ease;
+}
+
+.odds-draw:hover .odds-fact,
+.odds-draw:focus-visible .odds-fact {
+    color: var(--accent-ochre);
+}
+
+.odds-hint {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+@keyframes odds-in {
+    from { opacity: 0; transform: translateY(0.4rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 .room-brain { background: var(--bg-brain); }
 .room-work { background: var(--bg-work); }
@@ -5146,9 +5216,25 @@ body.hire-mode .arcade-crt-title {
 
 .studio-tabs {
     display: flex;
-    gap: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1.25rem 2rem;
     max-width: 920px;
     margin: 0 auto 1.75rem;
+}
+
+.studio-tab-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.1rem;
+    align-items: baseline;
+}
+
+.studio-tab-group-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
 }
 
 .studio-tabs button {

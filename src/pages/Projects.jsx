@@ -17,7 +17,6 @@ function Projects() {
     <HouseHallway
       wingId="work"
       doors={doors}
-      kicker="A workshop behind glass."
       lead={<ViewToggle />}
     />
   )

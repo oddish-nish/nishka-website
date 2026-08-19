@@ -35,7 +35,6 @@ export function HouseHallway({ wingId, doors, kicker, lead }) {
   return (
     <section className={`house-hallway hallway-${wingId}`}>
       <div className={`container hallway-inner ${kicker ? '' : 'no-kicker'}`}>
-        {lead}
         {kicker && <p className="hallway-kicker">{kicker}</p>}
         <h1 className="hallway-title">
           {wing.egg ? (
@@ -51,6 +50,7 @@ export function HouseHallway({ wingId, doors, kicker, lead }) {
           )}
         </h1>
         <p className="hallway-subtitle">{wing.subtitle}</p>
+        {lead}
         <nav className="hallway-doors" aria-label={`${wing.title} rooms`}>
           {doors.map((place) => (
             <Passage key={place.id} place={place} />

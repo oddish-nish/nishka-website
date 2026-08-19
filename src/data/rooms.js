@@ -120,7 +120,7 @@ export const WINGS = {
     title: 'Brain',
     subtitle: 'Where I keep all my unfinished questions.',
     egg: 'questioning → forming opinions → absorbing → learning',
-    rooms: ['questions', 'philosophy', 'books', 'learning'],
+    rooms: ['philosophy', 'questions', 'learning', 'books'],
     sample: 3,
   },
   work: {
@@ -128,7 +128,7 @@ export const WINGS = {
     path: '/projects',
     title: 'Work',
     subtitle: 'Where curiosity becomes something you can hold.',
-    rooms: ['experience', 'research', 'playground'],
+    rooms: ['research', 'playground', 'experience'],
     sample: 2,
   },
   heart: {
@@ -136,7 +136,7 @@ export const WINGS = {
     path: '/creative',
     title: 'Heart',
     subtitle: 'Where I keep the things I love too much.',
-    rooms: ['greenhouse', 'quotes', 'poems', 'performance', 'moments'],
+    rooms: ['poems', 'quotes', 'greenhouse', 'moments', 'performance'],
     sample: 3,
   },
   soul: {

@@ -6,6 +6,11 @@ const FILES = {
   quotes: 'src/data/quotes.js',
   books: 'src/data/books.js',
   photos: 'src/data/photos.js',
+  plants: 'src/data/plants.js',
+  questions: 'src/data/questions.js',
+  philosophies: 'src/data/philosophies.js',
+  learning: 'src/data/learning.js',
+  facts: 'src/data/facts.js',
 }
 
 const PHOTO_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif'])

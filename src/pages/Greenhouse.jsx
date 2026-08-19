@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import RoomShell from '../components/RoomShell'
 import { ShowAllButton, useCollection } from '../components/ShowAllButton'
-import { plants } from '../data/plants'
+import { useLiving } from '../lib/living'
 
 function Greenhouse() {
+  const plants = useLiving('plants')
   const { visible, showAll, toggle } = useCollection('plants', plants, 3)
   const [closeId, setCloseId] = useState(null)
   const close = visible.find((p) => p.id === closeId)

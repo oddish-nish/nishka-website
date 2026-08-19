@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import RoomShell from '../components/RoomShell'
 import { ShowAllButton, useCollection } from '../components/ShowAllButton'
-import { philosophies } from '../data/philosophy'
+import { useLiving } from '../lib/living'
 
 function Philosophy() {
+  const philosophies = useLiving('philosophies')
   const { visible, showAll, toggle } = useCollection('philosophy', philosophies, 3)
   const [page, setPage] = useState(0)
   const essay = visible[page % visible.length] || philosophies[0]
@@ -26,9 +27,9 @@ function Philosophy() {
               <p className="journal-count">
                 { (page % visible.length) + 1 } / {visible.length}
               </p>
-              <h2>{essay.title}</h2>
-              <p className="journal-preview">{essay.preview}</p>
-              {essay.paragraphs.map((para) => (
+              <h2>{essay?.title}</h2>
+              <p className="journal-preview">{essay?.preview}</p>
+              {(essay?.paragraphs || []).map((para) => (
                 <p key={para.slice(0, 24)}>{para}</p>
               ))}
             </article>

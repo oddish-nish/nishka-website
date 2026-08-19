@@ -3,17 +3,29 @@ import { poems as seedPoems } from '../data/poems'
 import { quotes as seedQuotes } from '../data/quotes'
 import { books as seedBooks } from '../data/books'
 import { photos as seedPhotos } from '../data/photos'
+import { plants as seedPlants } from '../data/plants'
+import { questions as seedQuestions } from '../data/questions'
+import { philosophies as seedPhilosophies } from '../data/philosophies'
+import { learning as seedLearning } from '../data/learning'
+import { facts as seedFacts } from '../data/facts'
 
 export const SEEDS = {
   poems: seedPoems,
   quotes: seedQuotes,
   books: seedBooks,
   photos: seedPhotos,
+  plants: seedPlants,
+  questions: seedQuestions,
+  philosophies: seedPhilosophies,
+  learning: seedLearning,
+  facts: seedFacts,
 }
 
 export const QUOTE_FLAVORS = ['curiosity', 'growth', 'identity', 'courage', 'purpose', 'love', 'wisdom']
 
 export const BOOK_SPINES = ['#3a2a24', '#6B5A7A', '#6B8B6B', '#A66B7D', '#C88B7A', '#5A7A8B', '#8BA68B', '#8B7A9A', '#C97A5A']
+
+export const PLANT_POTS = ['#6B8B6B', '#8BA68B', '#5A6B5A', '#A66B7D', '#C88B7A', '#8B7A9A', '#6B9AB8', '#D4A87A']
 
 const STORE_KEY = 'nishka-living'
 const EVENT = 'nishka-living-change'
