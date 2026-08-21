@@ -34,9 +34,9 @@ function Poems() {
               <button
                 className="poem-nav-btn poem-random-btn"
                 onClick={() => setCurrent(Math.floor(Math.random() * poems.length))}
-                aria-label="Random poem"
+                aria-label="Another poem"
               >
-                🎲
+                another
               </button>
               <button className="poem-index-btn" onClick={() => setShowIndex(true)}>
                 all poems
